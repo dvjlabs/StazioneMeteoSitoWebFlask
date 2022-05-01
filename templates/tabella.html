@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stazione metereologica DVJ LABS</title>
+    <meta name="description" content="Roxy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<style>
+html,body {
+ margin: 0;
+ padding: 0
+}
+</style>
+</head>
+
+<body>
+
+<div class="w3-container w3-pale-green w3-margin-bottom">
+  <h1>Dati stazione meteo</h1>
+</div> 
+
+<form method="GET" action="/tabelle">
+Valore 1:
+<select id="value1" name="value1">
+<option value="temperature">Temperatura</option>
+<option value="pressure">Pressione</option>
+<option value="humidity">Umidità</option>
+<option value="soilTemp">Temperatura del suolo</option>
+<option value="PM2.5">PM 2.5</option>
+<option value="PM10">PM 10</option>
+</select>
+
+<hr><!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+Valore 2:
+<select id="value2" name="value2">
+<option value="">---</option>
+<option value="temperature">Temperatura</option>
+<option value="pressure">Pressione</option>
+<option value="humidity">Umidità</option>
+<option value="soilTemp">Temperatura del suolo</option>
+<option value="PM2.5">PM 2.5</option>
+<option value="PM10">PM 10</option>
+</select>
+
+<hr><!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+Stazione:
+<select id="station" name="station">
+<option value="Stazione07">Stazione 07</option>
+<option value="Elisa">Stazione Elisa</option>
+<option value="Stazione PABLO">Stazione Pablo</option>
+<option value="SolfaStazione">Stazione Solfa</option>
+<option value="StazioneAlex">Stazione Alex</option>
+<option value="Stazione 1">Stazione 1</option>
+<option value="Stazione 02">Stazione 02</option>
+<option value="Stazione 01">Stazione 01</option>
+</select>
+
+<hr><!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+Ora:
+<select id="hour" name="hour">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select>
+
+<hr><!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<input type="submit" value="VISUALIZZA DATI">
+
+</form>
+
+<hr><!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<br>
+<br>
+<h1>{{TITOLO}}</h1>
+
+{{TABELLA|safe}}
+
+</body>
+
+</html>
